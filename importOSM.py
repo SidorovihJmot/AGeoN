@@ -106,8 +106,6 @@ def crtgradientmatrix(polygon, vectors_dict, resolution=1):
             gradient_matrix = np.maximum(gradient_matrix, water_effect)
     
     return gradient_matrix, transform
-
-    
     
 # -----------   
  
