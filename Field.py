@@ -1,4 +1,5 @@
 import csv
+from Point import *
 
 
 class Field:
@@ -16,18 +17,13 @@ class Field:
 	def get_field(self):
 		return self.field
 
-	def get_bounds(x, y, maxlen):
-		# looks like shit 
-		left = x - maxlen
-		if left < 0:
-			left = 0
-		up = y - maxlen
-		if up < 0:
-			up = 0 
-		right = x + maxlen
-		if right > len(self.field[0]):
-			right = len(self.field[0])
-		down = y + maxlen
-		if down > len(self.field):
-			down =  len(self.field)
-		return left, up, right, down
+	def get_point_info(self, point):
+		x, y = point.get_xy()
+		info = self.field[y][x]
+
+		if info == 0:
+			print("can be placed")
+		elif info == 1:
+			print("only visible")
+		else:
+			print("its bound")

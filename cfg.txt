@@ -1,2 +1,2 @@
-max_line_len = 200
+max_line_len = 250
 points_density_per_km = 4

@@ -5,6 +5,14 @@ class Course:
 			points = []
 		self.course = points.copy()
 	
-	def update(self, point):
+	def add_point(self, point):
 		self.course.append(point)
 
+	def get_last(self):
+		return self.course[-1]
+
+	def printed(self):
+		st = ""
+		for i in self.course:
+			st += f"{str(i.get_xy())} "
+		return st 
