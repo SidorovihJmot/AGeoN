@@ -16,3 +16,7 @@ class Course:
 		for i in self.course:
 			st += f"{str(i.get_xy())} "
 		return st 
+
+	def get_list(self):
+		print(type(self.course))
+		return self.course
